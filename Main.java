@@ -16,7 +16,7 @@ public class Main {
         System.out.println("Digite o primeiro número:");
         n1 = s.nextFloat();
         
-        System.out.println("Digite a operacao (+, -, * ou /):");
+        System.out.println("Digite o símbolo da operacao:");
         op = s.next();
         
         System.out.println("Digite o segundo número:");
@@ -26,16 +26,16 @@ public class Main {
         
         switch (op) {
             case "+":
-                r = n1 + n2;
+                r = new Soma().calcular(n1, n2);
             break;
             case "-":
-                r = n1 - n2;
+                r = new Subtracao().calcular(n1, n2);
             break;
             case "*":
-                r = n1 * n2;
+                r = new Multiplicacao().calcular(n1, n2);
             break;
             case "/":
-                r = n1 / n2;
+                r = new Divisao().calcular(n1, n2);
             break;
             default:
                 System.out.println("Simbolo da operacao nao reconhecida.");
